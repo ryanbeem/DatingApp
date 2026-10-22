@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Blue Collar Match",
+    "slug": "blue-collar-match",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.formoreoptions.dating"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1F2A44",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.formoreoptions.dating"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow access to your photos so you can add them to your profile.",
+          "cameraPermission": "Allow camera access so you can take a profile photo."
+        }
+      ]
+    ],
+    "scheme": "bluecollarmatch",
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

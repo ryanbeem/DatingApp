@@ -1,0 +1,10 @@
+# Web app routing on Apache (Turbify). Sends unknown paths to index.html so
+# links like /profile/12 work on refresh, and leaves the /api folder alone.
+Options -Indexes
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^api(/|$) - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

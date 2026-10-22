@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+
+# Server secrets and user content
+server/api/config.php
+server/api/uploads/*
+!server/api/uploads/.htaccess
+!server/api/uploads/.gitkeep
+server/api/install/demo_photos/*
+!server/api/install/demo_photos/README.txt
